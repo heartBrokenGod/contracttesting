@@ -1,0 +1,54 @@
+{
+  "consumer": {
+    "name": "ThisConsumer"
+  },
+  "interactions": [
+    {
+      "description": "A request for user 10",
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "User with given id exist"
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/users/10"
+      },
+      "response": {
+        "body": {
+          "content": {
+            "Username": "someUser",
+            "firstName": "Some",
+            "id": 10,
+            "lastName": "User",
+            "type": "someType"
+          },
+          "contentType": "application/json",
+          "encoded": false
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "status": 200
+      },
+      "transport": "http",
+      "type": "Synchronous/HTTP"
+    }
+  ],
+  "metadata": {
+    "pactRust": {
+      "ffi": "0.4.5",
+      "mockserver": "1.1.1",
+      "models": "1.1.2"
+    },
+    "pactSpecification": {
+      "version": "4.0"
+    }
+  },
+  "provider": {
+    "name": "ThisProvider"
+  }
+}
